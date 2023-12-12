@@ -1,13 +1,12 @@
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.InputMismatchException;
-import java.io.File;
-import java.util.List;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.InputMismatchException;
+import java.util.List;
 
 public class startPage extends JFrame {
     JPanel startPagePanel;
@@ -19,10 +18,87 @@ public class startPage extends JFrame {
     private JLabel typingGameTitle;
     private JSeparator transparentSepartor;
     private JButton leaderBoardsBtn;
+    private JButton EXITButton;
+    private JButton CHANGETHEMEButton;
     private boolean musicPlaying;
     private Clip clip; // Add a Clip field to control music playback
 
+    private Clip MCclip;
+
     public startPage() {
+
+        MinecraftPage MCpage = new MinecraftPage();
+        MCpage.getSingleTyperButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String EnteredName = null;
+                boolean valid = true;
+                try{
+                    EnteredName = MCpage.getTextField1().getText();
+                    containsAlphanumericCharacters(EnteredName);
+                    if(EnteredName.isEmpty()){
+                        throw new InputMismatchException("Input Username");
+                    }
+                } catch (InputMismatchException ime) {
+                    JOptionPane.showMessageDialog(startPage.this, ime.getMessage());
+                    valid = false;
+                }
+                if (valid){
+
+                }
+            }
+        });
+        MCpage.getQuitGameButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stopMusic();
+                dispose();
+            }
+        });
+        MCpage.getChangeThemeButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                startPagePanel.setVisible(true);
+                MCpage.getMinecraftPagepanel().setVisible(false);
+                setContentPane(startPagePanel);
+                stopMusic();
+                clip = getClip("Official Opening Credits_ Game of Thrones (HBO).wav");
+                if (clip != null) {
+                    clip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
+                    musicPlaying = true;
+                }
+            }
+        });
+
+        CHANGETHEMEButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MCpage.getMinecraftPagepanel().setVisible(true);
+                startPagePanel.setVisible(false);
+                setContentPane(MCpage.getMinecraftPagepanel());
+                stopMusic();
+                MCclip = getClip("C:\\Users\\kentv\\IdeaProjects\\TypingTestProgram\\Sweden.wav");
+                if (MCclip != null) {
+                    MCclip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
+                    musicPlaying = true;
+                }
+            }
+        });
+
+        EXITButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stopMusic();
+                dispose();
+            }
+        });
+        MCpage.getLeaderboardsButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showLeaderboards();
+            }
+        });
         leaderBoardsBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
