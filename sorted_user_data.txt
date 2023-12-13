@@ -1,13 +1,13 @@
 Leaderboard:
 
 Rank  User                 WPM       
-1     qwer                 120       
-2     qwerqwer             108       
-3     qwer                 102       
-4     wqer                 98        
-5     Goober               98        
-6     qQQQQ                97        
-7     qwerqwer             96        
-8     TESSSS               77        
-9     qwer                 76        
-10    qwer                 70        
+1     sad                  385       
+2     Kent                 343       
+3     qwer                 120       
+4     qwerqwer             108       
+5     qwer                 102       
+6     wqer                 98        
+7     Goober               98        
+8     qQQQQ                97        
+9     qwerqwer             96        
+10    TESSSS               77        

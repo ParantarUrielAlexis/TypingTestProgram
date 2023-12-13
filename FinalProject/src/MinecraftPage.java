@@ -9,6 +9,7 @@ public class MinecraftPage extends JFrame {
     private JButton changeThemeButton;
     private JButton quitGameButton;
     private JTextField textField1;
+    private JLabel TypecraftLabel;
 
     public JButton getSingleTyperButton() {
         return singleTyperButton;
@@ -33,6 +34,10 @@ public class MinecraftPage extends JFrame {
 
     public JButton getQuitGameButton() {
         return quitGameButton;
+    }
+
+    public JLabel getTypecraftLabel() {
+        return TypecraftLabel;
     }
 
     public static void main(String[] args) {

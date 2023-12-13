@@ -28,6 +28,10 @@ public class startPage extends JFrame {
     public startPage() {
 
         MinecraftPage MCpage = new MinecraftPage();
+
+
+
+
         MCpage.getSingleTyperButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,7 +48,7 @@ public class startPage extends JFrame {
                     valid = false;
                 }
                 if (valid){
-
+                        openMCTypingTest(EnteredName);
                 }
             }
         });
@@ -173,6 +177,24 @@ public class startPage extends JFrame {
         typingTest.setTitle("Typing Game");
 
         clip = getClip("The Pointy End.wav");
+        if (clip != null) {
+            clip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
+            musicPlaying = true;
+        }
+    }
+
+    private void openMCTypingTest(String userName) {
+        stopMusic();
+        // Close the current startPage GUI
+        setVisible(false);
+        // Open the new TypingTest GUI
+        openMCTypingTest MCTest = new openMCTypingTest(userName);
+        MCTest .setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        revalidate();
+        MCTest.setVisible(true);
+        MCTest.setTitle("Typing Game");
+
+        clip = getClip("C:\\Users\\kentv\\IdeaProjects\\TypingTestProgram\\FinalProject\\src\\Subwoofer Lullaby.wav");
         if (clip != null) {
             clip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
             musicPlaying = true;
