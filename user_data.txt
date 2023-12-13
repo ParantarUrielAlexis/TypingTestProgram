@@ -20,3 +20,5 @@ Jon Snow,57
 dasd,46
 sad,385
 Kent,343
+Kent,285
+Kent,57
