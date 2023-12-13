@@ -82,7 +82,7 @@ public class startPage extends JFrame {
                 startPagePanel.setVisible(false);
                 setContentPane(MCpage.getMinecraftPagepanel());
                 stopMusic();
-                MCclip = getClip("C:\\Users\\kentv\\IdeaProjects\\TypingTestProgram\\Sweden.wav");
+                MCclip = getClip("Sweden.wav");
                 if (MCclip != null) {
                     MCclip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
                     musicPlaying = true;
@@ -194,7 +194,7 @@ public class startPage extends JFrame {
         MCTest.setVisible(true);
         MCTest.setTitle("Typing Game");
 
-        clip = getClip("C:\\Users\\kentv\\IdeaProjects\\TypingTestProgram\\FinalProject\\src\\Subwoofer Lullaby.wav");
+        clip = getClip("Lullaby.wav");
         if (clip != null) {
             clip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
             musicPlaying = true;
