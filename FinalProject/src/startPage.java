@@ -194,7 +194,7 @@ public class startPage extends JFrame {
         MCTest.setVisible(true);
         MCTest.setTitle("Typing Game");
 
-        clip = getClip("Subwoofer Lullaby.wav");
+        clip = getClip("Lullaby.wav");
         if (clip != null) {
             clip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
             musicPlaying = true;
