@@ -7,11 +7,10 @@ import java.time.LocalTime;
 
 
 public class TypingTest extends JFrame implements ActionListener, KeyListener {
-    static String passage = ""; //Passage we get
-    String typedPass = ""; //Passage the user types
-    String message = ""; //Message to display at the end of the TypingTest
-
-    int typed = 0; //typed stores till which character the user has typed
+    static String passage = "";
+    String typedPass = "";
+    String message = "";
+    int typed = 0;
     int count = 0;
     int WPM;
 
@@ -20,8 +19,8 @@ public class TypingTest extends JFrame implements ActionListener, KeyListener {
     double elapsed;
     double seconds;
 
-    static boolean running; //If the person is typing
-    boolean ended; //Whether the typing test has ended or not
+    static boolean running;
+    boolean ended;
 
     final int SCREEN_WIDTH;
     final int SCREEN_HEIGHT;
@@ -119,14 +118,12 @@ public class TypingTest extends JFrame implements ActionListener, KeyListener {
         g.setFont(new Font("Verdana", Font.BOLD, 20));
         g.setColor(Color.black);
         if (running) {
-            // This will put our passage on the screen
             if (passage.length() > 1) {
                 int xOffset = g.getFont().getSize();
                 int yOffset = g.getFont().getSize() * 5;
                 drawWrappedText(g, passage, xOffset, yOffset, SCREEN_WIDTH - xOffset);
             }
 
-            // Displaying correctly typed passage in GREEN
             g.setColor(Color.GREEN);
             if (!typedPass.isEmpty()) {
                 int xOffset = g.getFont().getSize();
@@ -181,16 +178,16 @@ public class TypingTest extends JFrame implements ActionListener, KeyListener {
     }
 
     @Override
-    public void keyTyped(KeyEvent e) {//keyTyped uses the key Character which can identify capital and lowercase difference in keyPressed it takes unicode so it also considers shift which creates a problem
+    public void keyTyped(KeyEvent e) {
         if (passage.length() > 1) {
             if (count == 0)
                 start = LocalTime.now().toNanoOfDay();
 
-            else if (count == passage.length()) { //Once all 200 characters are typed we will end the time and calculate time elapsed
+            else if (count == passage.length()) {
                 end = LocalTime.now().toNanoOfDay();
                 elapsed = end - start;
-                seconds = elapsed / 1000000000.0; //nano/1000000000.0 is seconds
-                WPM = (int) (((200.0 / 5) / seconds) * 60); //number of character by 5 is one word by seconds is words per second * 60 WPM
+                seconds = elapsed / 1000000000.0;
+                WPM = (int) (((200.0 / 5) / seconds) * 60);
                 ended = true;
                 running = false;
                 count++;
@@ -199,10 +196,10 @@ public class TypingTest extends JFrame implements ActionListener, KeyListener {
             if (typed < passage.length()) {
                 running = true;
                 if (e.getKeyChar() == pass[typed]) {
-                    typedPass = typedPass + pass[typed]; //To the typed Passage we are adding what is currently typed
+                    typedPass = typedPass + pass[typed];
                     typed++;
                     count++;
-                } //If the typed character is not equal to the current position it will not add it to the typedPassage, so the user needs to type the right thing
+                }
             }
         }
     }
@@ -233,50 +230,43 @@ public class TypingTest extends JFrame implements ActionListener, KeyListener {
 
             backButton.setVisible(true);
             button.setText("RETRY");
-            leaderboardsButton.setVisible(true);  // Hide the Leaderboards button when the game starts
+            leaderboardsButton.setVisible(true);
         }
         if(e.getSource() == backButton){
             String newUserName = JOptionPane.showInputDialog(this, "Enter a new username:");
 
             if (newUserName != null && !newUserName.isEmpty()) {
-                // Create a new instance of TypingTest with the new username
                 TypingTest newTypingTest = new TypingTest(newUserName);
                 newTypingTest.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 newTypingTest.setSize(1000, 700);
                 newTypingTest.setVisible(true);
                 newTypingTest.setTitle("Typing Game");
 
-                setVisible(false); // Hide the current TypingTest
+                setVisible(false);
             }
         }
         if (e.getSource() == leaderboardsButton) {
-            // Display leaderboards (you can replace this with your actual leaderboard display logic)
             showLeaderboards();
         }
         if (running || ended) {
             repaint();
             backButton.setVisible(ended);
-            leaderboardsButton.setVisible(ended);  // Show the Leaderboards button after the game has ended
-            // Write user data to the file before reading
+            leaderboardsButton.setVisible(ended);
             if (WPM != 0 && !running) {
-                // Write user data to the file only if WPM is not 0 and it's not a retry
                 UserData.writeToFile(userName, WPM);
             }
 
-            // Read the final WPM from the file
             int previousWPM = UserData.readFromFile(userName);
             if (previousWPM != -1) {
                 System.out.println("Previous WPM for " + userName + ": " + previousWPM);
-                // Do something with the previous WPM value if needed
+
                 SortUserData.sortUserWPM();
             }
         }
     }
 
     private void showLeaderboards() {
-        // Call the function to sort user data
         SortUserData.sortUserWPM();
-        // Example usage of LeaderBoards (for testing purposes)
         java.util.List<SortUserData.UserData> userDataList = SortUserData.readUserDataFromFile();
         LeaderBoards leaderBoards = new LeaderBoards(userDataList);
         leaderBoards.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);

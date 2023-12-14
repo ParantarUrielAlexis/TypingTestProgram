@@ -21,7 +21,7 @@ public class startPage extends JFrame {
     private JButton EXITButton;
     private JButton CHANGETHEMEButton;
     private boolean musicPlaying;
-    private Clip clip; // Add a Clip field to control music playback
+    private Clip clip;
 
     private Clip MCclip;
 
@@ -106,7 +106,6 @@ public class startPage extends JFrame {
         leaderBoardsBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Call the function to sort and display leaderboards
                 showLeaderboards();
             }
         });
@@ -132,10 +131,9 @@ public class startPage extends JFrame {
             }
         });
 
-        // Initialize the Clip for music
         clip = getClip("Official Opening Credits_ Game of Thrones (HBO).wav");
         if (clip != null) {
-            clip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
             musicPlaying = true;
         }
     }
@@ -144,9 +142,7 @@ public class startPage extends JFrame {
     }
 
     private void showLeaderboards() {
-        // Call the function to sort user data
         SortUserData.sortUserWPM();
-        // Example usage of LeaderBoards (for testing purposes)
         List<SortUserData.UserData> userDataList = SortUserData.readUserDataFromFile();
         LeaderBoards leaderBoards = new LeaderBoards(userDataList);
         leaderBoards.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -166,21 +162,13 @@ public class startPage extends JFrame {
 
 
     private void openTypingTest(String userName) {
-        stopMusic();
-        // Close the current startPage GUI
         setVisible(false);
-        // Open the new TypingTest GUI
         TypingTest typingTest = new TypingTest(userName);
         typingTest.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         revalidate();
         typingTest.setVisible(true);
         typingTest.setTitle("Typing Game");
 
-        clip = getClip("The Pointy End.wav");
-        if (clip != null) {
-            clip.loop(Clip.LOOP_CONTINUOUSLY); // Loop the music continuously
-            musicPlaying = true;
-        }
     }
 
     private void openMCTypingTest(String userName) {
@@ -214,7 +202,7 @@ public class startPage extends JFrame {
 
             if (audioFile.exists()) {
                 AudioInputStream audioInput = AudioSystem.getAudioInputStream(audioFile);
-                clip = AudioSystem.getClip();  // Update the clip field here
+                clip = AudioSystem.getClip();
                 clip.open(audioInput);
                 return clip;
             } else {
