@@ -1,9 +1,4 @@
 
-qwer,70
-TESSSS,77
-qQQQQ,97
-qwer,69
-qwer,69
 wqer,98
 qwer,120
 qwerqwer,108
@@ -17,8 +12,12 @@ Goofy,69
 Goob,65
 Jon Snow,69
 Jon Snow,57
+Bob,49
+Cypher,94
 dasd,46
 sad,385
 Kent,343
 Kent,285
 Kent,57
+Robert,854
+Goober,42
