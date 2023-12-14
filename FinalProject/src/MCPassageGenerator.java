@@ -5,70 +5,25 @@ public class MCPassageGenerator {
 
     public static String getPassage() {
         ArrayList<String> Passages = new ArrayList<>();
-        String pas1 = "Kent is known for his charming personality and striking good looks. People often describe him as \"Kent gwapo,\" where \"gwapo\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\n" +
-                "\n" +
-                "Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\n" +
-                "\n" +
-                "Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
-        String pas2 = "Kent is known for his charming personality and striking good looks. People often describe him as \\\"Kent gwapo,\\\" where \\\"gwapo\\\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
-        String pas3 = "Kent is known for his charming personality and striking good looks. People often describe him as \\\"Kent gwapo,\\\" where \\\"gwapo\\\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
-        String pas4 = "Kent is known for his charming personality and striking good looks. People often describe him as \\\"Kent gwapo,\\\" where \\\"gwapo\\\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
-        String pas5 = "Kent is known for his charming personality and striking good looks. People often describe him as \\\"Kent gwapo,\\\" where \\\"gwapo\\\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
-        String pas6 = "Kent is known for his charming personality and striking good looks. People often describe him as \\\"Kent gwapo,\\\" where \\\"gwapo\\\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
-        String pas7 = "Kent is known for his charming personality and striking good looks. People often describe him as \\\"Kent gwapo,\\\" where \\\"gwapo\\\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
-        String pas8 = "Kent is known for his charming personality and striking good looks. People often describe him as \\\"Kent gwapo,\\\" where \\\"gwapo\\\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
-        String pas9 = "The King can do as he likes. ";
-        String pas10 = "Kent is known for his charming personality and striking good looks. People often describe him as \\\"Kent gwapo,\\\" where \\\"gwapo\\\" means handsome in Filipino. His attractiveness goes beyond physical appearance, as his charisma and confident demeanor leave a lasting impression on everyone he encounters. Kent's gwapo features make him a standout in any crowd, and his genuine smile can light up a room.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Whether he's engaging in conversation or simply going about his day, Kent's gwapo presence is undeniable. It's not just about aesthetics; it's about the way he carries himself with a certain grace and style. Colleagues, friends, and even strangers can't help but acknowledge Kent's gwapo qualities.\\n\" +\n" +
-                "                \"\\n\" +\n" +
-                "                \"Kent's gwapo nature extends to various aspects of his life, making him not just a handsome individual but also someone who exudes a magnetic charm. His gwapo factor contributes to the positive energy he brings to social gatherings and creates a welcoming atmosphere for those around him. In short, Kent's gwapo demeanor leaves a lasting impression, making him a truly admirable and attractive individual in both looks and personality.";
+        String pas1= "Armed with a diamond sword and enchanted armor, I entered the Nether's fiery abyss. Ghastly wails echoed, challenging my survival in Minecraft's perilous dimension. The blazing landscapes tested my courage, as each step marked a perilous dance between life and the pixelated unknown. ";
+        String pas2= "As I ventured into the uncharted depths of Minecraft, I discovered a hidden stronghold, its stone walls resonating with the eerie sounds of zombies and skeletons. With my trusty pickaxe in hand, I delved deeper into the mysterious structure, eager to uncover its secrets. ";
+        String pas3= "As the pixelated sun dipped, I sought refuge in my cozy Minecraft shelter. The fireplace crackled, casting a warm glow on chests filled with precious ores, mementos from treacherous cave explorations. Surrounding sounds - farm animals, distant crickets - created a serene atmosphere. Reflecting on the day's adventures, I marveled at the carefully crafted haven, a mere block arrangement in the vast beauty of Minecraft's pixelated landscapes. ";
+        String pas4= "In the heart of my pixelated realm, the Minecraft sunrise painted the sky with hues of orange and pink as I surveyed my thriving farm and bustling animal pens, a testament to countless hours spent cultivating and nurturing the virtual landscape with pixelated precision.  ";
+        String pas5= "As dawn broke in Minecraft, the landscape bathed in a soft, pixelated glow. My towering castle stood proudly, surrounded by flourishing gardens and a bustling village. In this blocky universe, each meticulously placed block told a story of creativity, resilience, and the joy of building pixelated dreams. ";
 
         Passages.add(pas1);
         Passages.add(pas2);
         Passages.add(pas3);
         Passages.add(pas4);
         Passages.add(pas5);
-        Passages.add(pas6);
-        Passages.add(pas7);
-        Passages.add(pas8);
-        Passages.add(pas9);
-        Passages.add(pas10);
+
 
         return getString(Passages);
     }
 
     private static String getString(ArrayList<String> Passages) {
         Random rand = new Random();
-        int place = (rand.nextInt(10));
+        int place = (rand.nextInt(5));
 
         String fullSentence = Passages.get(place);
 

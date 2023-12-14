@@ -8,7 +8,6 @@ public class LeaderBoards extends JFrame {
     private JTextArea ranking;
 
     public LeaderBoards(List<SortUserData.UserData> userDataList) {
-        // Initialize components, set layout, and add UI elements
         leaderBoardPanel = new JPanel(new BorderLayout());
         leaderBoardPanel.setBackground(Color.black);
         leaderBoardPanel.setForeground(Color.white);
@@ -18,7 +17,6 @@ public class LeaderBoards extends JFrame {
         ranking.setForeground(Color.white);
         ranking.setFont(new Font("Verdana", Font.PLAIN, 32));
 
-        // Display leaderboards information
         displayLeaderboards(userDataList);
 
         JScrollPane scrollPane = new JScrollPane(ranking);
@@ -29,13 +27,10 @@ public class LeaderBoards extends JFrame {
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Add window listener to handle the last leaderboard window
         addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosed(java.awt.event.WindowEvent windowEvent) {
-                // Check if this is the last leaderboard window
                 if (JFrame.getFrames().length == 0) {
-                    // If it is the last window, exit the program
                     System.exit(0);
                 }
             }
@@ -46,10 +41,10 @@ public class LeaderBoards extends JFrame {
         StringBuilder leaderboardText = new StringBuilder("Leaderboards:\n");
         int rank = 1;
 
-        // Sort user data based on WPM in descending order
+
         userDataList.sort(Comparator.comparingInt(SortUserData.UserData::wpm).reversed());
 
-        // Display only the top 10 users
+
         for (SortUserData.UserData userData : userDataList.subList(0, Math.min(userDataList.size(), 10))) {
             leaderboardText.append(rank).append(". ").append(userData.userName()).append(" - ").append(userData.wpm()).append("\n");
             leaderboardText.append("--------------------------------------------------------------------\n");
